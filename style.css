@@ -21,7 +21,7 @@ background-size:cover;
 .inicio__header{
 display:flex;
 justify-content: space-between;
-padding:2rem 0 2rem 0;
+padding:var(--espacio) 0 var(--espacio) 0;
 }
 
 .inicio__contenido-principal{
@@ -41,6 +41,8 @@ align-self: center;
 .header__nav{
 padding-right:var(--espacio);
 align-self: center;
+display:flex;
+flex-direction: row;
 }
 
 .nav__link{
@@ -49,6 +51,14 @@ font-size:1.3rem;
 text-decoration:none;
 font-family:sans-serif;
 margin:.5rem;
+}
+
+.nav__usuario{
+height:2rem;
+width:2rem;
+filter:invert(100%);
+margin-left:1.5rem;
+cursor:pointer;
 }
 
 .contenido-principal__titulo{
@@ -123,17 +133,14 @@ color:#fff;
 .contenedor__img{
 height:4rem;
 width:4rem;
-
 }
 
 .quienes-somos{
-display:flex;
-flex-wrap:wrap;
-flex-direction:row;
-justify-content: center;
+display:grid;
+grid-template-columns:50% 50%;
+grid-template-rows:3rem 1fr;
+padding:2rem;
 background:rgb(230,230,230);
-padding:3rem .5rem 3rem .5rem;
-gap:2rem;
 }
 
 .quienes-somos b,p{
@@ -143,8 +150,7 @@ font-family: sans-serif;
 }
 
 .quienes-somos__contenedor-b{
-padding:0 0 0 2rem;
-flex-basis: 100vw;
+grid-column:1/3;
 }
   
 .contenedor-b__titulo{
@@ -157,7 +163,6 @@ width:30rem;
 }
 
 .quienes-somos__quienes-somos-cont-info{
-width:30rem;
 display:grid;
 }
 
@@ -165,13 +170,17 @@ display:grid;
 text-align:center;
 }
 
+.quienes-somos-cont-info__texto{
+  justify-self: center;
+}
+
 .contenedor-opciones-casas{
 display:flex;
 flex-direction:row;
-flex-wrap:wrap;
+flex-wrap:nowrap;
 justify-content:center;
-padding:1rem;
 gap:1rem;
+padding:1rem;
 }
 
 .contenedor-opciones-casas__link{
@@ -193,18 +202,18 @@ background: url(img/casa-grande.jpg);
 
 .contenedor-opciones-casas__caja{
 height:24rem;
-width:17rem;
-border-radius:.5rem;
+width:30vw;
 background-repeat:no-repeat;
 background-position:center center;
 background-size:cover;
 transition:.3s;
 padding:.5rem 0 0 0;
+border-radius:.5rem;
 cursor:pointer;
 }
 
 .contenedor-opciones-casas__caja:hover{
-width:19rem;
+width:33vw;
 transition:.3s;
 }
 
@@ -234,7 +243,6 @@ flex-direction:row;
 .link__img{
 height:1rem;
 width:1rem;
-
 margin-right:.5rem;
 align-self:center;
 }
@@ -245,686 +253,160 @@ font-family:serif;
 }
 
 
-
 @media screen and (max-width:1100px){
+  .quienes-somos__img{
+  height:15rem;
+  width:25rem;
+  }
+
+
+  .quienes-somos__quienes-somos-cont-info{
+  display:grid;
+  }
+}
+
+@media screen and (max-width:930px){
   .header__logo{
-    font-size:1.7rem;
-    }
-
-
-.nav__link{
-font-size:1rem;
-}
-    
-.contenido-principal__titulo{
-font-size:5.5rem;
-}
-    
-.contenido-principal__texto{
-font-size:1rem;
-}
-
-.contenedor__texto{
-font-size:1rem;
-}
-      
-.contenedor__img{
-height:3rem;
-width:3rem;
-}
-
-.quienes-somos b,p{
-font-size:1rem;
-color: #000;
-font-family: sans-serif;
-}
-        
-.quienes-somos__contenedor-b{
-padding:0 0 0 2rem;
-flex-basis: 100vw;
-}
-          
-.contenedor-b__titulo{
-border-bottom:.1rem solid #000;
-}
-        
-.quienes-somos__img{
-height:14rem;
-width:24rem;
-}
-        
-.quienes-somos__quienes-somos-cont-info{
-width:23rem;
-display:grid;
-}
-        
-.quienes-somos-cont-info__titulo{
-text-align:center;
-}
-
-.contenedor-opciones-casas__caja{
-height:21rem;
-width:14rem;
-}
-
-.contenedor-opciones-casas__caja:hover{
-width:16rem;
-}
-
-
-.contenedor-opciones-casas__caja b{
-font-size:1rem;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width:900px){
-
-  .header__logo{
-    font-size:1.5rem;
-    }
-
+  font-size:1.8rem;
+  }
 
   .nav__link{
-    font-size:.9rem;
-    }
-        
-    .contenido-principal__titulo{
-    font-size:5rem;
-    }
-        
-    .contenido-principal__texto{
-    font-size:.9rem;
-    }
-    
-    .contenedor__texto{
-    font-size:.9rem;
-    }
-          
-    .contenedor__img{
-    height:2.5rem;
-    width:2.5rem;
-    }
-    
-    .quienes-somos b,p{
-    font-size:.9rem;
-    color: #000;
-    font-family: sans-serif;
-    }
-            
-    .quienes-somos__contenedor-b{
-    padding:0 0 0 2rem;
-    flex-basis: 100vw;
-    }
-
-    .quienes-somos__contenedor-b{
-      padding:0 0 0 1rem;
-    }
-              
-    .contenedor-b__titulo{
-    border-bottom:.1rem solid #000;
-    }
-            
-    .quienes-somos__img{
-    height:12rem;
-    width:19rem;
-    }
-            
-    .quienes-somos__quienes-somos-cont-info{
-    width:21rem;
-    display:grid;
-    }
-            
-    .quienes-somos-cont-info__titulo{
-    text-align:center;
-    }
-    
-    .contenedor-opciones-casas__caja{
-    height:17rem;
-    width:12rem;
-    }
-
-    .contenedor-opciones-casas__caja b{
-      font-size:.9rem;
-    }
-    
-    .contenedor-opciones-casas__caja:hover{
-    width:14rem;
-    }
-}
-
-
-
-
-
-
-@media screen and (max-width:750px) {
-  .header__logo{
-    font-size:1.3rem;
-    }
-
+  font-size:1rem;
+  }
 
   .contenido-principal__titulo{
   font-size:4rem;
   }
-    
+
   .contenido-principal__texto{
-  font-size:.8rem;
-  }
-
-.info__contenedor{
-width:20rem;
-display:grid;
-gap:.4rem;
-}
-    
-.contenedor__texto{
-font-size:.8rem;
-}
-    
-.contenedor__img{
-height:3rem;
-width:3rem;
-}
-
-.quienes-somos b,p{
-font-size:.8rem;
-}
-
-.quienes-somos__quienes-somos-cont-info{
-width:17rem;
-}
-
-.quienes-somos__img{
-height:10rem;
-width:16rem;
-align-self:center;
-}
-
-.contenedor-opciones-casas__caja b{
-  font-size:.8rem;
-}
-
-}
-
-
-
-
-
-@media screen and (max-width:620px){
-
-.quienes-somos b,p{
-font-size:.8rem;
-}
-
-.quienes-somos__quienes-somos-cont-info{
-  width:14rem;
-  }
-
-.quienes-somos img{
-  height:9rem;
-  width:15rem;
-}
-
-
-}
-
-
-
-
-
-
-/*
-*{
-padding:0;
-margin:0;
-}
-
-body{
-font-size:20px;
-}
-
-.article-inicio{
-height:100vh;
-width:100vw;
-background:rgb(150 150 150);
-background:url(img/imagen-fondo.jpg);
-display:grid;
-grid-template-rows:5rem auto;
-background-repeat:no-repeat;
-background-position:center center;
-background-size:cover;
-}
-
-  .header{
-  height:5rem;
-  width:100vw;
-  display:grid;
-  grid-template-columns:70vw auto auto auto;
-  }
-
-    .logo{
-    font-size:3.3rem;
-    font-family: "Pathway Gothic One", sans-serif;
-    color:#fff;
-    margin:.5rem;
-    justify-self:start;
-    align-self:center;
-    margin-left:3rem;
-    }
-
-    .logo::after{
-    content:".";
-    color:rgb(150,150,150);
-    }
-
-    .article-inicio a{
-    font-size:1.5rem;
-    font-family:sans-serif;
-    align-self:center;
-    justify-self:start;
-    color:#ededed;
-    text-decoration:none;
-    border-bottom:.2rem solid transparent;
-    transition:.3s;
-    }
-
-    .article-inicio a:hover{
-    background:linear-gradient(to top, rgba(255,255,255, 10%) 10%, transparent);
-    border-bottom:.2rem solid #fff;
-    color:#fff;
-    transition:.3s;
-    }
-
-  .inicio-primera-vista{
-  width:100vw;
-  display:grid;
-  grid-template-rows:14rem 2.5rem 3rem;
-  align-content:center;
-  }
-
-    .inicio-primera-vista h1{
-    font-size:6rem;
-    font-family: "Pathway Gothic One", sans-serif;
-    margin-left:4rem;
-    color:#fff;
-    }
-
-    .inicio-primera-vista p{
-    font-size:1,9rem;
-    font-family:sans-serif;
-    margin-left:4rem;
-    font-weight:700;
-    color:#fff;
-    }
-
-    .inicio-primera-vista form{
-    height:2rem;
-    width:15rem;
-    display: grid;
-    grid-template-columns:90% 10%;
-    margin-left:4rem;
-    gap:.1rem;
-    }
-
-      .inicio-primera-vista form input{
-      height:2rem;
-      background:transparent;
-      border:none;
-      outline:none;
-      border-bottom:.1rem solid #FFF;
-      color:#fff;
-      }
-
-      .inicio-primera-vista form input::placeholder{
-      color:#fff;
-      }
-
-      .inicio-primera-vista form input:hover{
-      background:rgba(200,200,200, 40%);
-      transition:.3s;
-      }
-
-/*
-.article-sabe{
-height:30vh;
-width:100vw;
-display:grid;
-grid-template-columns:auto auto auto;
-justify-content:center;
-background:url(img/imagen-fondo2.jpeg);
-background-position:center center;
-background-repeat:no-repeat;
-background-size:cover;
-}
-
-  .article-sabe-caja{
-  height:100%;
-  display:grid;
-  grid-template-rows:5rem 2rem 2rem;
-  align-content:center;
-  }
-
-    .article-sabe-caja img{
-    height:4rem;
-    width:4rem;
-    margin-left:1rem;
-    filter:invert(100%);
-    }
-
-    .article-sabe-caja strong{
-    font-family:sans-serif;
-    margin-left:1rem;
-    color:#fff;
-    }
-
-    .article-sabe-caja p{
-    font-family:sans-serif;
-    margin-left:1rem;
-    color:#fff;
-    }
-
-
-.article-trabajando{
-height:60vh;
-width:100vw;
-background:rgb(230,230,230);
-display:grid;
-grid-template-columns:auto auto;
-grid-template-rows:auto auto auto auto auto;
-place-content:center;
-gap:1rem;
-}
-
-.article-trabajando b{
-font-family:sans-serif;
-}
-
-.article-trabajando-titulo{
-grid-column:1/3;
-border-bottom:.1rem solid #000;
-padding:.1rem;
-justify-self:start;
-}
-
-.article-trabajando-img{
-height:20rem;
-width:33rem;
-grid-row:2/6;
-}
-
-.article-trabajando p{
-font-family:sans-serif;
-width:21rem;
-}
-
-
-.contenedor-opciones-casas{
-height:60%;
-width:100vw;
-display:grid;
-place-content:center;
-grid-template-columns:auto auto auto;
-gap:2rem;
-background:rgb(255,255,255);
-}
-
-.contenedor-opciones-casas div{
-height:26rem;
-width:15rem;
-border-radius:.2rem;
-display:grid;
-align-content:end;
-transition:.3s;
-}
-
-.contenedor-opciones-casas div:hover{
-width:20rem;
-transition:.3s;
-}
-
-.contenedor-opciones-casas div b{
-font-family:sans-serif;
-font-size:1.2rem;
-color:#000;
-justify-self:center;
-}
-
-.contenedor-opciones-casas a{
-height:2rem;
-width:90%;
-justify-self:center;
-margin-bottom:1rem;
-}
-
-.contenedor-opciones-casas button{
-height:2rem;
-width:90%;
-border:none;
-background:#000;
-color:#fff;
-transition:.3s;
-border-radius:.2rem;
-}
-
-.contenedor-opciones-casas button:hover{
-background:#fff;
-color:#000;
-transition:.3s;
-}
-
-.caja1{
-background-image:url(img/casa-pequeña.jpg);
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center center;
-}
-
-.caja2{
-background-image:url(img/casa-grande.jpg);
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center center;
-}
-
-.caja3{
-background-image:url(img/casa-moderna.jpg);
-background-repeat:no-repeat;
-background-size:cover;
-background-position:center center;
-}
-
-
-
-.informacion-contacto{
-  height:25vh;
-  width:100vw;
-  background:rgb(245,245,245);
-  display:grid;
-  grid-template-columns:auto auto auto;
-  grid-template-rows:auto auto auto;
-  gap:2rem;
-  place-content:center;
-  }
-  
-  .informacion-contacto-titulo{
-  grid-column:1/4;
-  justify-self:center;
-  }
-  
-  .contenedor-img{
-  height:4rem;
-  width:4rem;
-  display:grid;
-  place-content:center;
-  background:#d8be77;
-  border-radius:2rem;
-  justify-self:center;
-  }
-  
-  .informacion-contacto a,b{
-  font-family:sans-serif;
-  font-size:1.2rem;
-  justify-self:center;
-  }
-  
-  .informacion-contacto img{
-  height:2rem;
-  width:2rem;
-  justify-self:center;
-  }
-  
-
-
-footer{
-height:15vh;
-width:100vw;
-background:#000;
-display:grid;
-grid-template-columns:3rem 3rem;
-place-content:center;
-}
-
-footer p{
-color:#fff;
-font-family:sans-serif;
-margin:.1rem;
-}
-
-footer p:first-child{
-grid-column:1/3;
-}
-
-footer img{
-height:2rem;
-width:2rem;
-filter:invert(100%);
-}
-
-.img-redes{
-height:2rem;
-width:2rem;
-}
-
-@media screen and (max-width:500px){
-  .logo{
-  font-size:1.5rem;
-  
-  }
-
-  .header a{
-  font-size:.7rem;
-  }
-
-  .article-inicio a{
-  border-bottom:.1rem solid transparent;
-  }
-
-  .article-inicio a:hover{
-  border-bottom:.1rem solid #fff;
-  }
-
-  .inicio-primera-vista h1{
-  font-size:2rem;
-  }
-
-  .inicio-primera-vista p{
-  font-size:.7rem;
-  }
-
-  .inicio-primera-vista{
-    grid-template-rows:5rem .7rem 1rem;
-  }
-
-  .inicio-primera-vista form{
-  width:6rem;
-  }
-
-  .inicio-primera-vista form input{
-  height:1.5rem;
-  }
-
-  .article-sabe-caja{
-  grid-template-rows:auto auto auto;
-  }
-
-  .article-sabe-caja img{
-  height:1.8rem;
-  width:1.8rem;
-  }
-
-  .article-sabe-caja strong{
-  font-size:.7rem;
-  margin-left:.5rem;
-  margin:.5rem;
-  }
-  .article-sabe-caja p{
-  font-size:.7rem;
-  margin-left:.5rem;
-  }
-
-  .article-trabajando-titulo{
   font-size:1rem;
   }
 
-  .article-trabajando-img{
-  height:11rem;
-  width:15rem;
-  }
-
-  .article-trabajando b{
+  .contenedor__texto{
   font-size:1rem;
   }
 
-  .article-trabajando p{
-  font-size:.7rem;
-  width:11rem;
+  .contenedor-b__titulo{
+  font-size:1rem;
   }
 
-  .contenedor-opciones-casas div{
+  .quienes-somos__img{
   height:13rem;
-  width:7rem;
+  width:22rem;
   }
 
-  .contenedor-opciones-casas div:hover{
-  width:8rem;
+  .quienes-somos-cont-info__titulo{
+  font-size:1rem;
   }
 
-  .contenedor-opciones-casas div b{
-  font-size:.7rem;
+  .quienes-somos-cont-info__texto{
+  font-size:1rem;
+  width:22rem;
   }
 
-  .contenedor-opciones-casas button{
-  height:1.3rem;
-  }
-
-  .informacion-contacto{
-  grid-template-rows:2rem 1rem 1rem;
-  gap:.5rem;
-  }
-  
-  .informacion-contacto div{
-  height:2rem;
-  width:2rem;
-  }
-
-  .informacion-contacto img{
-  height:1.5rem;
-  width:1.5rem;
-  }
-
-  .informacion-contacto a,b{
+  .contenedor-opciones-casas__caja{
   font-size:1rem;
   }
 }
 
-*/
+@media screen and (max-width:810px){
+  .quienes-somos__img{
+  height:11rem;
+  width:20rem;
+  align-self: center;
+  }
+
+  .quienes-somos-cont-info__texto{
+  width:18rem;
+  text-align: center;
+  }
+}
+
+
+
+@media screen and (max-width:700px){
+  .quienes-somos{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  padding:2rem;
+  }
+  .quienes-somos__contenedor-b__titulo{
+  text-align:center;
+  }
+
+  .quienes-somos__quienes-somos-cont-info{
+  gap:1rem;
+  }
+
+  .contenedor-opciones-casas{
+  flex-direction:column;
+  padding:2rem;
+  gap:3rem;
+  }
+
+  .contenedor-opciones-casas__caja{
+  width:20rem;
+  justify-self: center;
+  }
+
+  .contenedor-opciones-casas__caja:hover{
+  width:20rem;
+  transform:scale(1.1);
+  }
+  
+}
+
+@media screen and (max-width:550px){
+    .nav__link{
+    margin:.2rem;
+    align-self: center;
+    }
+    
+    .nav__usuario{
+    margin-left:1rem;
+    }
+
+
+  .header__logo{
+    font-size:1.4rem;
+    }
+  
+    .nav__link{
+    font-size:.9rem;
+    }
+  
+    .contenido-principal__titulo{
+    font-size:3rem;
+    }
+  
+    .contenido-principal__texto{
+    font-size:.9rem;
+    }
+  
+    .contenedor__texto{
+    font-size:.9rem;
+    }
+  
+    .contenedor-b__titulo{
+    font-size:.9rem;
+    }
+  
+    .quienes-somos__img{
+    height:11rem;
+    width:20rem;
+    }
+  
+    .quienes-somos-cont-info__titulo{
+    font-size:.9rem;
+    }
+  
+    .quienes-somos-cont-info__texto{
+    font-size:.9rem;
+    width:20rem;
+    }
+  
+    .contenedor-opciones-casas__caja{
+    font-size:.9rem;
+    }
+}

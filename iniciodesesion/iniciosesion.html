@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="shortcut icon" href="../img/casa.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inmobiliaria - inicio de sesion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <form method="post" class="form">
+        <b class="form__b">inicie sesion</b>
+        <label for="" class="form__label">nombre</label>
+        <input type="text" name="nombre" id="" class="form__nombre input">
+        <label for="" class="form__label">mail</label>
+        <input type="email" name="mail" id="" class="form__mail input">
+        <label for="" class="form__label">contraseña</label>
+        <input type="password" name="contraseña" id="" class="form__contraseña input">
+        <input type="submit" name="boton" value="enviar" class="form__boton boton">
+    </form>
+    <div class="contenedor-info">
+        <h1>bienvenido</h1>
+        <p>inicio sesion para disfrutar al 100% del sitio web</p>
+        <a href="../registrarse/registrarse.php">¿no tienes una cuenta?</a>
+    </div>
+</div>
+<p class="alerta-error">usuario no encontrado</p>
+
+<?php include("backend.php"); ?>
+</body>
+</html>

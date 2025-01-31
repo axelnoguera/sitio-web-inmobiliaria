@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="../img/casa.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inmobiliaria - registrarse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="contenedor">
+    <form method="post" class="form">
+        <b class="form__b" tabindex="1">registrese</b>
+        <label for="" class="form__label">nombre</label>
+        <input type="text" name="nombre" class="form__nombre input" tabindex="2" aria-label="escriba su nombre">
+        <label for="" class="form__label">mail</label>
+        <input type="email" name="mail" class="form__mail input" tabindex="3" aria-label="escriba su mail">
+        <label for="" class="form__label">contraseña</label>
+        <input type="password" name="contraseña" class="form__contraseña input" tabindex="4" aria-label="escriba su contraseña">
+        <input type="submit" name="boton" value="enviar" class="form__boton boton" tabindex="5" aria-label="boton" id="boton">
+    </form>
+    <div class="contenedor-info">
+        <h1 tabindex="6">bienvenido</h1>
+        <p tabindex="7">crea tu cuenta para disfrutar al 100% del sitio web</p>
+        <a href="../iniciodesesion/iniciosesion.php" tabindex="8">¿ya tienes una cuenta?</a>
+    </div>
+</div>
+<p class="alerta-error">tienes que modificar los o las cantidad de caracteres</p>
+
+<?php include("backend.php"); ?>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="../img/casa.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inmobiliaria - usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><?php session_start(); ?>
+    <div class="caja"><span class="cruz-cierre" id="cruz">X</span><div class="cierre"><p class="texto-cierre">¿desea cerrar su cuenta?</p><form class="boton-cierre" id="confirmacion" method="post"><input type="submit" value="si" name="boton"></form></div></div>    
+ 
+    <div class="contenedor__usuario">
+        <div class="boton-cerrar-sesion" id="boton-cerrar-sesion"><p>cerrar sesion</p></div>
+        <img src="../img/usuario.png" alt="" class="usuario__img">
+        <p class="usuario__nombre"><p>axel (texto agregado por falta de dinamismo con php)</i><?php echo $_SESSION["datos"][0]; ?></p>
+        <p class="usuario__mail"><p>axelprogramacion123@gmail.com (texto agregado por falta de dinamismo con php)</i><?php echo $_SESSION["datos"][1]; ?></p>
+    </div>
+    <div class="contenedor__historial">
+
+    </div>
+    <script src="script.js"></script>
+    <?php include("backend.php"); ?>
+</body>
+</html>
