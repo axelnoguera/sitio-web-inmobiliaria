@@ -352,6 +352,9 @@ font-family:serif;
 
   .contenedor-opciones-casas__caja:hover{
   width:20rem;
+  }
+
+  .contenedor-opciones-casas__caja:active{
   transform:scale(1.1);
   }
   
