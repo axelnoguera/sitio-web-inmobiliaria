@@ -4,10 +4,13 @@ margin:0;
 }
 
 body{
+font-size:20px;
 background:rgb(230,230,230);
+}
+
+main{
 display:grid;
 grid-template-columns:repeat(auto-fill,17rem);
-font-size:20px;
 }
 
 article{
@@ -61,7 +64,7 @@ transition:.3s;
 
 
 @media screen and (min-width:500px){
-    body{
-      place-content:center;
-    }
+  body{
+    place-content:center;
+  }
 }

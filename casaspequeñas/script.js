@@ -1,8 +1,12 @@
-let boton = document.querySelector("button");
+if(document.querySelector(".contenedor").hasChildNodes()){
 
-boton.addEventListener("click", ()=>{
-    //location.href = "casaelegida.html";
-    let nodo = boton.parentNode;
-    let texto = nodo.childNodes[3];
-    console.log(texto.textContent)
-});
+    console.log(document.querySelector(".contenedor").firstChild());
+
+    /*
+    let nodoEtiqueta = document.createElement("p");
+
+    nodoEtiqueta.appendChild(document.createTextNode("¡no hay casas publicadas!"));
+  
+    document.querySelector(".contenedor").appendChild(nodoEtiqueta);
+    */
+};
