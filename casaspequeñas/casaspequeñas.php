@@ -9,6 +9,6 @@
     
     
 <script src="script.js"></script>
-<?php include("conexionMySql.php")>
+<?php include("conexionMySql.php") ?>
 </body>
 </html>
