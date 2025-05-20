@@ -5,9 +5,7 @@
     <title>casas pequeñas</title>
     <link rel="stylesheet" href="style.css">
 <body>
-   <main class="contenedor">
-    <article></article>
-   </main>
+   
     
     
 <script src="script.js"></script>
