@@ -5,7 +5,23 @@
     <title>casas pequeñas</title>
     <link rel="stylesheet" href="style.css">
 <body>
-   
+ 
+<?php
+  
+if($resultado){
+
+while($producto=$resultado->fetch_assoc()){
+
+
+<div>
+<img src="$producto[imagen]">
+<p>$producto[texto]</p>
+<span>$producto[precio]</span>
+</div>
+
+};
+
+?>
     
     
 <script src="script.js"></script>
