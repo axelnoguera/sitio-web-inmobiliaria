@@ -13,11 +13,13 @@ if($resultado){
 while($producto=$resultado->fetch_assoc()){
 
 
-<div>
-<img src="$producto[imagen]">
-<p>$producto[texto]</p>
-<span>$producto[precio]</span>
+echo "
+<div class="">
+  <img src="$producto[imagen]" class="">
+  <p class="">$producto[texto]</p>
+  <span class="">$producto[precio]</span>
 </div>
+";
 
 };
 
