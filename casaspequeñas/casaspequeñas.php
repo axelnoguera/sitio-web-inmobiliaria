@@ -10,18 +10,13 @@
   
 if($resultado){
 
-while($producto=$resultado->fetch_assoc()){
-
-
-echo "
-<article class="">
-  <img src="$producto[imagen]" class="">
-  <p class="">$producto[texto]</p>
-  <b class="">$producto[precio]</b>
-</article>
-";
-
-};
+  echo "
+  <article>
+    <img src="$producto[imagen]">
+    <p>$producto[texto]</p>
+    <b>$producto[precio]</b>
+  </article>
+  ";
 
 ?>
     
