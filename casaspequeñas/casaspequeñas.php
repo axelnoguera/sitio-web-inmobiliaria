@@ -10,13 +10,15 @@
   
 if($resultado){
 
-  echo "
-  <article>
-    <img src="$producto[imagen]">
-    <p>$producto[texto]</p>
-    <b>$producto[precio]</b>
-  </article>
-  ";
+  while($resultado as $producto){
+    echo "
+    <article>
+      <img src="$producto[imagen]">
+      <p>$producto[texto]</p>
+      <b>$producto[precio]</b>
+    </article>
+    ";
+  };
 
 ?>
     
