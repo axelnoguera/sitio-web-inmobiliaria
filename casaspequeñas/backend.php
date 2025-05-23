@@ -6,7 +6,11 @@ $consulta = "select * from ?";
 
 $prepare = $conexion->prepare($consulta");
 
-$resultado = $prepare->execute([$tabla]);
+$prepare = $prepare->execute([$tabla]);
+
+$resultado = prepare->fetchALL(PDO::FETCH_ASSOC);
+
+
 
 };
 
