@@ -1,3 +1,6 @@
+<?php include("conexionMySql.php") ?>
+<?php include("backend.php"); ?>
+
 <!DOCTYPE html>
 <html lang="es">
     <link rel="shortcut icon" href="../img/casa.png" type="image/png">
@@ -24,7 +27,5 @@ if($resultado){
     
     
 <script src="script.js"></script>
-<?php include("conexionMySql.php") ?>
-<?php include("backend.php");
 </body>
 </html>
