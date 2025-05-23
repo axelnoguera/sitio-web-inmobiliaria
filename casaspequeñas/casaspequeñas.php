@@ -13,16 +13,14 @@
   
 if($resultado){
 
-  while($resultado as $producto){
+  foreach($resultado as $producto){
     echo "
 
-    ?>
       <article>
-        <img src="$producto[imagen]">
-        <p>$producto[texto]</p>
-        <b>$producto[precio]</b>
+        <img src="$producto['imagen']">
+        <p>$producto['texto']</p>
+        <b>$producto['precio']</b>
       </article>
-    <?php 
 
     ";
   };
